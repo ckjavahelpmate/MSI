@@ -4,10 +4,9 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
@@ -66,10 +65,18 @@ public class BaseTest {
 	@BeforeMethod
 	public void launchBrowser(@Optional("edge") String browser) {
 		if (browser.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--remote-allow-origins=*");
+			options.addArguments("--headless=new"); // Comment this line if you want GUI
+
+			driver = new ChromeDriver(options);
+
 		} else if (browser.equalsIgnoreCase("Edge")) {
-			driver = new EdgeDriver();
+			driver = new EdgeDriver(); // Add EdgeOptions here if needed
 		}
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(dataUtility.getEnvironmentURL("TEST"));
