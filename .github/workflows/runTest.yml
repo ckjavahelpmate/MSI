@@ -3,7 +3,7 @@ name: Run MSI Tests
 on:
   workflow_dispatch:        # Manual trigger
   push:
-    branches: [ "master" ]
+    branches: [ "master" ]  # Triggers on push to master
   pull_request:
     branches: [ "master" ]
 
@@ -29,7 +29,7 @@ jobs:
       run: chrome --version
 
     - name: Run Tests with Maven (continue even if tests fail)
-      run: mvn clean test -Dbrowser=Chrome || true
+      run: mvn clean test || true
 
     - name: Upload Surefire Reports
       if: always()
@@ -51,5 +51,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: test-output/
-        keep_files: true
-        keep_history: true
