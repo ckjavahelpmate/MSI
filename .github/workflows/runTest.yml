@@ -1,9 +1,8 @@
-name: Run MSI Tests
+name: Run MSI Smoke Tests
 
 on:
-  workflow_dispatch:        # Manual trigger
   push:
-    branches: [ "master" ]  # Triggers on push to master
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
@@ -28,8 +27,8 @@ jobs:
     - name: Print Chrome version
       run: chrome --version
 
-    - name: Run Tests with Maven (continue even if tests fail)
-      run: mvn clean test || true
+    - name: Run Smoke Tests with TestNG
+      run: mvn clean test -DsuiteXmlFile=testng-smoke.xml || true
 
     - name: Upload Surefire Reports
       if: always()
@@ -44,10 +43,3 @@ jobs:
       with:
         name: Extent Report
         path: test-output/
-
-    - name: Deploy Extent Report to GitHub Pages
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: test-output/
