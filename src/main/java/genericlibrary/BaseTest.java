@@ -63,7 +63,7 @@ public class BaseTest {
 	 */
 	@Parameters("browser")
 	@BeforeMethod
-	public void launchBrowser(@Optional("edge") String browser) {
+	public void launchBrowser(@Optional("Chrome") String browser) {
 		if (browser.equalsIgnoreCase("Chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
