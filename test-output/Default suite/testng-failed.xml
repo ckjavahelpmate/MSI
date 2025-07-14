@@ -8,8 +8,9 @@
           <include name="tearDown"/>
           <include name="launchBrowser"/>
           <include name="clearDir"/>
-          <include name="validUserTest" invocation-numbers="0"/>
           <include name="inValidUserTest"/>
+          <include name="setUp"/>
+          <include name="logout"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>
