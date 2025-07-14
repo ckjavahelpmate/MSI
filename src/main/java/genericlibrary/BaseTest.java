@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
@@ -37,24 +39,24 @@ public class BaseTest {
 	/**
 	 * Initializes the page objects before each test method.
 	 */
-//	@BeforeMethod
-//	public void setUp() {
-//		loginpage = new LoginPage(driver);
-//		homePage = new HomePage(driver);
-//	}
+	@BeforeMethod
+	public void setUp() {
+		loginpage = new LoginPage(driver);
+		homePage = new HomePage(driver);
+	}
 
 	/**
 	 * Logs out the user after each test method. If logout fails, the exception is
 	 * caught silently.
 	 */
-//	@AfterMethod
-//	public void logout() {
-//		try {
-//			homePage.logout();
-//		} catch (Exception e) {
-//			// Handle logout failure silently
-//		}
-//	}
+	@AfterMethod
+	public void logout() {
+		try {
+			homePage.logout();
+		} catch (Exception e) {
+			// Handle logout failure silently
+		}
+	}
 
 	/**
 	 * Launches the browser and navigates to the application under test.
@@ -62,7 +64,7 @@ public class BaseTest {
 	 * @param browser the browser to use, defaults to "edge" if none is provided.
 	 */
 	@Parameters("browser")
-	@BeforeMethod
+	@BeforeClass
 	public void launchBrowser(@Optional("Chrome") String browser) {
 		if (browser.equalsIgnoreCase("Chrome")) {
 			ChromeOptions options = new ChromeOptions();
@@ -86,11 +88,11 @@ public class BaseTest {
 	/**
 	 * Quits the browser and cleans up resources after all tests have run.
 	 */
-	@AfterMethod
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}
-	
+
 	@BeforeSuite
 	public void clearDir() {
 		ScreenshotUtil.clearOldScreenshots();
