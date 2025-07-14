@@ -3,7 +3,7 @@ name: Run MSI Tests
 on:
   workflow_dispatch:        # Manual trigger
   push:
-    branches: [ "master" ]
+    branches: [ "master" ]  # Triggers on push to master
   pull_request:
     branches: [ "master" ]
 
@@ -50,4 +50,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: test-output
+        publish_dir: test-output/
