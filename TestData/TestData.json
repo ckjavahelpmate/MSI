@@ -1,0 +1,50 @@
+{
+	"validUserTest": [
+		{
+			"Execute": true,
+			"AgencyName": "MILLENNIAL SPECIALTY INS LLC DBA in California as MILLENNIAL INSURANCE AGENCY LLC",
+			"AgentName": "Bresha Coates",
+			"Street": "4018 N Riverside Dr",
+			"City": "Tampa",
+			"Zipcode": "33603",
+			"FirstName": "TestFirstName",
+			"LastName": "TestLastName",
+			"DOB": "07/01/2000",
+			"Email": "test@xyz.com",
+			"Contact": "(813) 838-1121",
+			"PaymentPlan": "Annual",
+			"YearBuilt": "2022",
+			"Occupancy": "Primary",
+			"RoofYear": "2022",
+			"Construction": "Frame",
+			"AgentLicense": "123456",
+			"CoverageA": "500000",
+			"CoverageB": "10%",
+			"CoverageC": "50%",
+			"CoverageD": "20%"
+		},
+		{
+			"Execute": false,
+			"AgencyName": "MILLENNIAL SPECIALTY INS LLC DBA in California as MILLENNIAL INSURANCE AGENCY LLC",
+			"AgentName": "Bresha Coates",
+			"Street": "4018 N Riverside Dr",
+			"City": "Tampa",
+			"Zipcode": "33603",
+			"FirstName": "TestFirstName",
+			"LastName": "TestLastName",
+			"DOB": "07/01/2000",
+			"Email": "test@xyz.com",
+			"Contact": "(813) 838-1121",
+			"PaymentPlan": "Annual",
+			"YearBuilt": "2022",
+			"Occupancy": "Primary",
+			"RoofYear": "2022",
+			"Construction": "Frame",
+			"AgentLicense": "123456",
+			"CoverageA": "500000",
+			"CoverageB": "10%",
+			"CoverageC": "50%",
+			"CoverageD": "20%"
+		}
+	]
+}

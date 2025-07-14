@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-15T01:25:37 IST" name="Default suite" finished-at="2025-07-15T01:25:45 IST" duration-ms="8107">
+    <groups>
+    </groups>
+    <test started-at="2025-07-15T01:25:37 IST" name="Default test" finished-at="2025-07-15T01:25:45 IST" duration-ms="8107">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="clearDir()[pri:0, instance:tests.LoginTest@185a6e9]" started-at="2025-07-15T01:25:37 IST" name="clearDir" finished-at="2025-07-15T01:25:37 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearDir -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.LoginTest@185a6e9]" started-at="2025-07-15T01:25:38 IST" name="launchBrowser" finished-at="2025-07-15T01:25:45 IST" duration-ms="7370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="validUserTest(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:tests.LoginTest@185a6e9]" started-at="2025-07-15T01:25:45 IST" name="validUserTest" data-provider="testData" finished-at="2025-07-15T01:25:45 IST" duration-ms="15" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"Execute":true,"AgencyName":"MILLENNIAL SPECIALTY INS LLC DBA in California as MILLENNIAL INSURANCE AGENCY LLC","AgentName":"Bresha Coates","Street":"4018 N Riverside Dr","City":"Tampa","Zipcode":"33603","FirstName":"TestFirstName","LastName":"TestLastName","DOB":"07/01/2000","Email":"test@xyz.com","Contact":"(813) 838-1121","PaymentPlan":"Annual","YearBuilt":"2022","Occupancy":"Primary","RoofYear":"2022","Construction":"Frame","AgentLicense":"123456","CoverageA":"500000","CoverageB":"10%","CoverageC":"50%","CoverageD":"20%"}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "pages.LoginPage.singIn(String, String)" because "this.loginpage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "pages.LoginPage.singIn(String, String)" because "this.loginpage" is null
+at tests.LoginTest.validUserTest(LoginTest.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUserTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@185a6e9]" started-at="2025-07-15T01:25:45 IST" name="tearDown" finished-at="2025-07-15T01:25:45 IST" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
