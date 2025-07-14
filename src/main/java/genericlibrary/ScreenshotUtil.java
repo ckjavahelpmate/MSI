@@ -41,14 +41,16 @@ public class ScreenshotUtil extends BaseTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				stream.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			  try {
+			        if (stream != null) {
+			            stream.close();
+			        }
+			    } catch (IOException e) {
+			        e.printStackTrace();
+			    }
 		}
 
-	}
+	}	
 
 	/**
 	 * Captures a screenshot of the current browser window and saves it with a
