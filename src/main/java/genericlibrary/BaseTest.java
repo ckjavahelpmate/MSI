@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -28,7 +29,15 @@ public class BaseTest {
 	public void launchBrowser(@Optional("Chrome") String browser) {
 		System.out.println("Launching Browser");
 		if (browser.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+		    options.addArguments("--headless=new"); // New headless mode
+		    options.addArguments("--no-sandbox");
+		    options.addArguments("--disable-dev-shm-usage");
+		    options.addArguments("--remote-allow-origins=*"); // Optional if needed
+		    options.addArguments("--disable-gpu"); // Optional
+		    options.addArguments("window-size=1920,1080");
+
+		    driver = new ChromeDriver(options);
 
 		} else if (browser.equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver(); // Add EdgeOptions here if needed

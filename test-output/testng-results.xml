@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-15T03:20:52 IST" name="Suite" finished-at="2025-07-15T03:21:17 IST" duration-ms="25322">
+  <suite started-at="2025-07-15T03:22:36 IST" name="Suite" finished-at="2025-07-15T03:23:37 IST" duration-ms="61237">
     <groups>
       <group name="smoke">
-        <method signature="LoginTest.inValidUserTest()[pri:0, instance:tests.LoginTest@489115ef]" name="inValidUserTest" class="tests.LoginTest"/>
-        <method signature="LoginTest.validUserTest(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:tests.LoginTest@489115ef]" name="validUserTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.inValidUserTest()[pri:0, instance:tests.LoginTest@3cd3e762]" name="inValidUserTest" class="tests.LoginTest"/>
+        <method signature="LoginTest.validUserTest(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:tests.LoginTest@3cd3e762]" name="validUserTest" class="tests.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-07-15T03:20:52 IST" name="Test3" finished-at="2025-07-15T03:21:17 IST" duration-ms="25322">
-      <class name="tests.FirstTest">
-        <test-method is-config="true" signature="clearDir()[pri:0, instance:tests.FirstTest@3b0090a4]" started-at="2025-07-15T03:20:52 IST" name="clearDir" finished-at="2025-07-15T03:20:52 IST" duration-ms="11" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clearDir -->
-      </class> <!-- tests.FirstTest -->
+    <test started-at="2025-07-15T03:22:36 IST" name="Test3" finished-at="2025-07-15T03:23:37 IST" duration-ms="61237">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:20:52 IST" name="launchBrowser" finished-at="2025-07-15T03:21:01 IST" duration-ms="8667" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:15 IST" name="launchBrowser" finished-at="2025-07-15T03:23:23 IST" duration-ms="8080" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,19 +22,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:21:01 IST" name="setUp" finished-at="2025-07-15T03:21:01 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:23 IST" name="setUp" finished-at="2025-07-15T03:23:23 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="inValidUserTest()[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:21:01 IST" name="inValidUserTest" finished-at="2025-07-15T03:21:02 IST" duration-ms="544" status="PASS">
+        <test-method signature="inValidUserTest()[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:23 IST" name="inValidUserTest" finished-at="2025-07-15T03:23:24 IST" duration-ms="421" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inValidUserTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:21:02 IST" name="logout" finished-at="2025-07-15T03:21:12 IST" duration-ms="10652" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:24 IST" name="logout" finished-at="2025-07-15T03:23:34 IST" duration-ms="10455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method signature="validUserTest(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:21:13 IST" name="validUserTest" data-provider="testData" finished-at="2025-07-15T03:21:17 IST" duration-ms="4094" status="PASS">
+        <test-method signature="validUserTest(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:34 IST" name="validUserTest" data-provider="testData" finished-at="2025-07-15T03:23:37 IST" duration-ms="2364" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,19 +45,64 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validUserTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:21:13 IST" name="setUp" finished-at="2025-07-15T03:21:13 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:34 IST" name="setUp" finished-at="2025-07-15T03:23:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:21:17 IST" name="logout" finished-at="2025-07-15T03:21:17 IST" duration-ms="245" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:37 IST" name="logout" finished-at="2025-07-15T03:23:37 IST" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@489115ef]" started-at="2025-07-15T03:21:17 IST" name="tearDown" finished-at="2025-07-15T03:21:17 IST" duration-ms="417" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@3cd3e762]" started-at="2025-07-15T03:23:37 IST" name="tearDown" finished-at="2025-07-15T03:23:37 IST" duration-ms="223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginTest -->
+      <class name="tests.FirstTest">
+        <test-method is-config="true" signature="clearDir()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:22:36 IST" name="clearDir" finished-at="2025-07-15T03:22:36 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearDir -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:22:36 IST" name="launchBrowser" finished-at="2025-07-15T03:22:45 IST" duration-ms="8460" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:22:45 IST" name="setUp" finished-at="2025-07-15T03:22:45 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCase1()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:22:45 IST" name="testCase1" finished-at="2025-07-15T03:22:50 IST" duration-ms="5023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:22:50 IST" name="logout" finished-at="2025-07-15T03:23:00 IST" duration-ms="10060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method signature="testCase2()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:23:00 IST" name="testCase2" finished-at="2025-07-15T03:23:05 IST" duration-ms="5023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase2 -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:23:00 IST" name="setUp" finished-at="2025-07-15T03:23:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:23:05 IST" name="logout" finished-at="2025-07-15T03:23:15 IST" duration-ms="10056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.FirstTest@f5958c9]" started-at="2025-07-15T03:23:15 IST" name="tearDown" finished-at="2025-07-15T03:23:15 IST" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.FirstTest -->
     </test> <!-- Test3 -->
   </suite> <!-- Suite -->
 </testng-results>
