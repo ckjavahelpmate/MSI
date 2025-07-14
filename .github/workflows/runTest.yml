@@ -28,7 +28,7 @@ jobs:
       run: chrome --version
 
     - name: Run Smoke Tests with TestNG
-      run: mvn clean test -DsuiteXmlFile=testng-smoke.xml || true
+      run: mvn clean test -Dsurefire.suiteXmlFiles=testng-smoke.xml || true
 
     - name: Upload Surefire Reports
       if: always()
