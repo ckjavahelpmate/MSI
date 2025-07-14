@@ -1,0 +1,53 @@
+name: Run MSI Tests
+
+on:
+  workflow_dispatch:        # Manual trigger
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Install Chrome
+      uses: browser-actions/setup-chrome@v1
+
+    - name: Print Chrome version
+      run: chrome --version
+
+    - name: Run Tests with Maven (continue even if tests fail)
+      run: mvn clean test || true
+
+    - name: Upload Surefire Reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Surefire Reports
+        path: target/surefire-reports/
+
+    - name: Upload Extent Report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Extent Report
+        path: test-output/
+
+    - name: Deploy Extent Report to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: test-output
